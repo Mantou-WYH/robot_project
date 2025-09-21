@@ -12,10 +12,10 @@ if __name__ == '__main__':
 
     while True:
         img = ep_camera.read_cv2_image()
-        results = model(img)
+        #results = model(img)
 
         # Visualize the results
-        img_result = results[0].plot()
-        cv2.imshow("test",img_result)
+        #img_result = results[0].plot()
+        cv2.imshow("test",img)
         if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
