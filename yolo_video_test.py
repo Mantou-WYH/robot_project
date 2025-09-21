@@ -9,7 +9,7 @@ if __name__ == '__main__':
     ep_robot.initialize(conn_type="ap")
     ep_camera = ep_robot.camera
     # Load a pretrained YOLO model
-    model = YOLO("yolo11n.pt")
+    model = YOLO("yolo5s.pt")
 
     # Perform object detection on an image
     img = ep_camera.read_cv2_image()
