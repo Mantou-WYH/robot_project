@@ -11,8 +11,8 @@ if __name__ == '__main__':
     info = helper.build_qrcode_string(ssid="iPhone", password="13666054325")
     myqr.run(words=info)
     time.sleep(1)
-    img = Image.open(QRCODE_NAME)
-    img.show()
+    #img = Image.open(QRCODE_NAME)
+    #img.show()
     if helper.wait_for_connection():
         print("Connected!")
     else:
