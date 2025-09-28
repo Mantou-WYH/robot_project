@@ -10,10 +10,11 @@ if __name__ == '__main__':
     ep_camera = ep_robot.camera
     model = YOLO("/home/scy/robot_project/yolov5s.pt")
     print(torch.cuda.is_available())
+    print(model.device)
     ep_camera.start_video_stream(display=False, resolution=camera.STREAM_360P)
     while True:
         img = ep_camera.read_cv2_image()
-        results = model(img)
+        results = model(img,half=True)
         # Visualize the results
         img_result = results[0].plot()
         cv2.imshow("test",img_result)
