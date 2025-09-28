@@ -2,7 +2,7 @@ from robomaster import robot
 from robomaster import camera
 from ultralytics import YOLO
 import cv2
-
+import torch
 
 if __name__ == '__main__':
     ep_robot = robot.Robot()
